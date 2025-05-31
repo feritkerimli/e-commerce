@@ -5,7 +5,7 @@ import { addShoppingCart } from '../redux/shoppingSlice';
 import { change } from '../redux/moreInfoSlice';
 import CardInfo from './CardInfo';
 import { useState } from 'react';
-import { FaStar, FaStarHalfAlt, FaRegStar, FaDollarSign } from 'react-icons/fa';
+import { FaStar, FaStarHalfAlt, FaRegStar, FaDollarSign,FaRegHeart,FaHeart,FaCartPlus,FaShoppingCart } from 'react-icons/fa';
 export default function Card(props) {
     const dispatch = useDispatch();
     const favorites = useSelector(state => state.myFavorite.favorites);
@@ -75,7 +75,7 @@ export default function Card(props) {
                         <div className='button-container'>
                             <button className='more-info-btn main-btn' onClick={() => moreInfo(index)}>More info</button>
                             <button className='favorite-btn' onClick={() => toggleFavorite(index)}>
-                                {isFavorite ? <img src="../img/heart-solid.svg" alt="unfavorite" /> : <img src="../img/heart-regular.svg" alt="" />}
+                                {isFavorite ?  <FaHeart className='favorite-icon'/>: <FaRegHeart FaHeart className='favorite-icon'/>}
                             </button>
                             <button className='add-shopping-btn' onClick={() => dispatch(addShoppingCart({
                                 title: props.title[index],
@@ -84,7 +84,7 @@ export default function Card(props) {
                                 brand: props.brand[index],
                                 pic: props.pic[index],
                                 stock : props.stock[index]
-                            }))}>{shoppingProducts.find(elem => elem.title === props.title[index]) ? <img src='./img/cart.svg'/> : <img src='./img/cart-plus.svg'/> }</button>
+                            }))}>{shoppingProducts.find(elem => elem.title === props.title[index]) ? <FaShoppingCart className='shopping-icon'/> : <FaCartPlus className='shopping-icon'/> }</button>
 
                         </div>
                     </div>

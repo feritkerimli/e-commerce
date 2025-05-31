@@ -5,7 +5,7 @@ import Category from '../pages/Category';
 import { useDispatch, useSelector } from 'react-redux';
 import { change } from '../redux/loginRegisterSlice';
 import LoginRegister from './LoginRegister';
-import { FaSignInAlt,FaUserPlus } from 'react-icons/fa';
+import { FaSignInAlt,FaUserPlus,FaSearch } from 'react-icons/fa';
 export default function Header(props) {
   const [inputValue, setInputValue] = useState('');
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,7 +40,8 @@ export default function Header(props) {
           onChange={(e) => setInputValue(e.target.value)}
         />
         <button className='main-btn' onClick={search}>
-          <img src="../img/search.svg" alt="search button" />
+          {/* <img src="../img/search.svg" alt="search button" /> */}
+          <FaSearch />
         </button>
       </div>
 
