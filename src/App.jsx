@@ -16,10 +16,10 @@ export default function App() {
     <div className="App">
       <Header setSelectedCategory={setSelectedCategory} setSearchValue={setSearchValue}/>
       <Routes>
-        <Route path="/e-commerce/" element={<Home selectedCategory={selectedCategory} searchValue={searchValue}/>} />
-        <Route path="/e-commerce/about" element={<About />} />
-        <Route path="/e-commerce/favorite" element={<Favorite />} />
-        <Route path="/e-commerce/shoppingcart" element={<ShoppingCart />} />
+        <Route path="/" element={<Home selectedCategory={selectedCategory} searchValue={searchValue}/>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/favorite" element={<Favorite />} />
+        <Route path="/shoppingcart" element={<ShoppingCart />} />
       </Routes>
       <Footer/>
     </div>
