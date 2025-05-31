@@ -3,8 +3,6 @@ export default function Contact() {
         <div className='Contact'>
             <button className="contact-btn">Contact</button>
             <div className="contact-container">
-                {/* <h2>Contact Us</h2> */}
-                {/* <p>If you have any questions, feedback or inquiries — reach out to us!</p> */}
 
                 <div className="contact-info">
                     <p>📞 +994 70 8710 71 79</p>
