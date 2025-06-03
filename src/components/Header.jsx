@@ -24,10 +24,10 @@ export default function Header(props) {
       </div>
 
       <div className={`nav ${menuOpen ? 'open' : ''}`}>
-        <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
-        <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
-        <NavLink to="/favorite" onClick={() => setMenuOpen(false)}>Favorite</NavLink>
-        <NavLink to="/shoppingcart" onClick={() => setMenuOpen(false)}>Shopping Cart</NavLink>
+        <NavLink to="/e-commerce/" onClick={() => setMenuOpen(false)}>Home</NavLink>
+        <NavLink to="/e-commerce/about" onClick={() => setMenuOpen(false)}>About</NavLink>
+        <NavLink to="/e-commerce/favorite" onClick={() => setMenuOpen(false)}>Favorite</NavLink>
+        <NavLink to="/e-commerce//shoppingcart" onClick={() => setMenuOpen(false)}>Shopping Cart</NavLink>
         <Contact />
         <Category setSelectedCategory={props.setSelectedCategory} />
       </div>
