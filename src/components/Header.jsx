@@ -23,7 +23,7 @@ export default function Header(props) {
         Luxera <span>•</span>
       </div>
 
-      <div className={`nav ${menuOpen ? 'open' : ''} `}>
+      <div className={`nav ${menuOpen ? 'open' : ''}`}>
         <NavLink to="/e-commerce/" onClick={() => setMenuOpen(false)}>Home</NavLink>
         <NavLink to="/e-commerce/about" onClick={() => setMenuOpen(false)}>About</NavLink>
         <NavLink to="/e-commerce/favorite" onClick={() => setMenuOpen(false)}>Favorite</NavLink>
